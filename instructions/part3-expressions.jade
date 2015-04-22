@@ -106,7 +106,7 @@ section(data-state="h_if_else")
   br
   pre
     code(data-trim, contenteditable).
-      if (x < 0) {
+      if (x &lt; 0) {
         "less than"
       }
       else if (x > 0) {
@@ -121,7 +121,7 @@ section(data-state="h_if_else")
   br
   pre
     code(data-trim, contenteditable).
-      if (x < 0) {
+      if (x &lt; 0) {
         "less than"
       }
       else 
@@ -257,30 +257,6 @@ section(data-state="h_match_wild")
 section.intro.green(data-background="#134")
   h1 Pattern Matching with 
     b Pattern Guards
-
-
-
-
-section(data-state="h_match_pattern")
-  style.
-    .h_match_pattern header:after{ content: "Syntax: Pattern Guards"; }
-  br
-  pre
-    code(data-trim, contenteditable).syntax.
-      expression match {
-        case pattern          => expression
-        case value if boolean => expression
-        case value            => expression
-      }   
-    br
-    br
-    code(data-trim, contenteditable).fragment.
-      val msg = status match {
-        case 200 => "okay"
-        case 400 => "not okay"
-        case x if x < 500 => "odd, got this: " + x
-        case x => "error! got this error status: " + x
-      }   
 
 
 

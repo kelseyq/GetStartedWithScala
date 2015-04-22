@@ -159,7 +159,7 @@ section
         val fruits = List("apple", "cherry", "rhubarb")
         val changedFruits = 
           new scala.collection.mutable.ListBuffer[String]
-        for (i <- 0 until fruits.length) {
+        for (i &lt;- 0 until fruits.length) {
             changedFruits += (fruits(i) + " pie")
         }
         changedFruits.result
@@ -172,7 +172,7 @@ section
         val fruits = List("apple", "orange", "cranberry")
         val changedFruits = 
           new scala.collection.mutable.ListBuffer[String]
-        for (i <- 0 until fruits.length) {
+        for (i &lt;- 0 until fruits.length) {
             changedFruits += (fruits(i) + " juice")
         }
         changedFruits.result
@@ -186,7 +186,7 @@ section
         val fruits = List("strawberry", "blueberry", "grape")
         val changedFruits = 
           new scala.collection.mutable.ListBuffer[String]
-        for (i <- 0 until fruits.length) {
+        for (i &lt;- 0 until fruits.length) {
             changedFruits += ("frozen " + fruits(i))
         }
         changedFruits.result
@@ -216,7 +216,7 @@ section(data-state="h_mapimpl").left
           theFunction: (String) => String): List[String] = {
           val newList = 
             new scala.collection.mutable.ListBuffer[String]
-          for (i <- 0 until fruits.length) {
+          for (i &lt;- 0 until fruits.length) {
               newList += theFunction(fruits(i))
           }   
           newList.result      
@@ -246,7 +246,7 @@ section(data-state="h_mapimpl").left
         val fruits = List("apple", "orange", "cranberry")
         val changedFruits = 
           new scala.collection.mutable.ListBuffer[Int]
-        for (i <- 0 until fruits.length) {
+        for (i &lt;- 0 until fruits.length) {
             changedFruits += fruits(i).length
         }
         changedFruits.result
@@ -263,7 +263,7 @@ section(data-state="h_mapimpl").left
           List[O] = {
           val outputList = 
             new scala.collection.mutable.ListBuffer[O]
-          for (i <- 0 until inputList.length) {
+          for (i &lt;- 0 until inputList.length) {
               outputList += theFunction(inputList(i))
           }   
           outputList.result      
@@ -375,7 +375,7 @@ section(data-state="h_reducing")
   pre
     code(data-trim, contenteditable).
       List(29, 16, 72, 13).reduce { (max, i) => 
-        if (max < i) i else max
+        if (max &lt; i) i else max
       }
     code(data-trim, contenteditable).fragment.
       // 72
@@ -389,7 +389,7 @@ section(data-state="h_filtering")
     .h_filtering header:after{ content: "filter()"; }
   pre
     code(data-trim, contenteditable).
-      List(1, 2, 3).filter( i => i < 3 )
+      List(1, 2, 3).filter( i => i &lt; 3 )
     code(data-trim, contenteditable).fragment.
       // List(1, 2)
 
