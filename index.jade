@@ -1,10 +1,27 @@
+include intro.jade
+
+section.intro.white(data-background="#245")
+  h1 
+    b Now 
+    | the learning begins
 
 
-    
-section.intro
-  h2 
-    a(href="/intro.html") Intro
-  h2 
-    a(href="/instructions.html") Instructables
+
+include instructions/part1-overview.jade
+include instructions/part2-basics.jade
+include exercises/part1-setup.jade
+include exercises/part2-basics.jade
+include instructions/part3-expressions.jade
+include exercises/part3-expressions.jade
+include instructions/part4-functions.jade
+include exercises/part4-functions.jade
+include instructions/part5-classes.jade
+include exercises/part5-classes.jade
+include instructions/part6-firstclass.jade
+include exercises/part6-firstclass.jade
+include instructions/fin.jade
+
+
+// include instructions/part6-firstclass_orig.jade
 
 
